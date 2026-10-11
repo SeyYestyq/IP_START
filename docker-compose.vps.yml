@@ -6,7 +6,7 @@ services:
     ports: !override
       - "127.0.0.1:8100:8080"
     environment:
-      CORS_ORIGINS: "https://bot-project.ru,https://www.bot-project.ru,https://vps.bot-project.ru"
+      CORS_ORIGINS: "https://bot-project.ru,https://www.bot-project.ru"
       DEMO_OFFLINE: ${DEMO_OFFLINE:-0}
       DEMO_TOKEN: ${DEMO_TOKEN:-demo-masha-token}
       HTTP_ADDR: ":8080"

@@ -1,6 +1,6 @@
 # Demo MVP Implementation Plan
 
-> **Status:** Implemented (Phase 0–4). this doc is the living checklist.
+> **Status:** Implemented (Phase 0–4). This doc is the living checklist.
 
 **Goal:** Ship a pitch-ready AI Business Copilot web demo (beauty persona «Маша») with streaming chat, router agents, and Generative UI cards on mocked banking/FNS data.
 

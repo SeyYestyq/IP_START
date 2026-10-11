@@ -43,4 +43,3 @@
 - Landing = pastel/bento/3D; Home ≈ «Сервисы»; chat/money = спокойный trust + `#EF3124`  
 - Radius карточек 24–32px; segment active = тёмная pill
 
-
