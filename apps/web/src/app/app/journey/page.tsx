@@ -106,7 +106,7 @@ const stages: Stage[] = [
 
 const checkIcons = [Zap, Percent, Target];
 
-const STORAGE_KEY = "alfa_start_journey_checks";
+const STORAGE_KEY = "business_start_journey_checks";
 
 function checklistHits(stage: Stage, level: number, checks: Record<string, boolean>) {
   if (stage.id < level) return stage.checklist.length;

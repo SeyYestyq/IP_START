@@ -1,7 +1,7 @@
 # PRD — Production (Bank Blueprint)
 
 **Статус:** Specification complete (implementation after demo validation)  
-**Цель:** AI Business Copilot внутри экосистемы Альфа-Бизнес / Платежный бизнес, совместимый с контуром банка.  
+**Цель:** AI Business Copilot внутри экосистемы банка / платёжного бизнеса, совместимый с контуром безопасности.  
 **Клиент:** React Native SuperApp; **AI:** on-prem multi-agent RAG; **Events:** Kafka.
 
 ## Vision
@@ -24,10 +24,10 @@
 | Tax Calculator | ПСН, УСН 6/15%; API ФНС + БД приходов/расходов → драфт декларации |
 | Unit Economics | CAC/LTV/Margin → P&L и график безубыточности |
 
-## Integration в Альфа-Бизнес
+## Интеграция в экосистему банка
 
 - Точка входа: **FAB** или отдельный **Tab**.  
-- UI Copilot — более воздушный и «умный», чем основной banking chrome, но на бренд-токенах Альфы.  
+- UI Copilot — более воздушный и «умный», чем основной banking chrome, на современных финтех-токенах.  
 - Progressive disclosure по CJM-уровню клиента.
 
 ## Phased delivery
@@ -80,4 +80,4 @@
 
 ## Dependencies
 
-- Core banking APIs, СМЭВ/ФНС, Kafka platform, GPU inference cluster, Alfa design system RN, legal sign-off на дисклеймеры.
+- Core banking APIs, СМЭВ/ФНС, Kafka platform, GPU inference cluster, Mobile Design System (RN), юридическое согласование дисклеймеров.

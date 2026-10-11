@@ -5,7 +5,7 @@ Embedded JSONL under `data/`:
 | File | Topics |
 |------|--------|
 | `tax.jsonl` | НПД, УСН, ЕНП/ЕНС, календарь, ПСН, дисклеймеры |
-| `banking.jsonl` | РКО/эквайринг Альфа (публичные ориентиры), копилка, кэшбек, демо-персона |
+| `banking.jsonl` | РКО/эквайринг (публичные ориентиры), копилка, кэшбек, демо-персона |
 | `faq.jsonl` | FAQ питча, карта законов, продукты банка |
 | `compliance.jsonl` | 115-ФЗ, 152-ФЗ, светофор, guard |
 | `legal.jsonl` | Риски договора аренды |
@@ -13,4 +13,4 @@ Embedded JSONL under `data/`:
 
 Retrieval: in-memory lexical ranking (`Index.Retrieve`). Wired via `tools.RetrieveKB` into `GENERAL_QA`, tax, legal, compliance.
 
-All chunks are **demo-labeled digests** — not official Alfa Bank, FNS, or Consultant full-text republication. Prefer links + сжатый смысл for the pitch.
+All chunks are **demo-labeled digests** — not official bank, FNS, or Consultant full-text republication. Prefer links + сжатый смысл for the pitch.

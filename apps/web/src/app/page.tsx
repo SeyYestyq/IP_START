@@ -66,10 +66,10 @@ export default function LandingPage() {
       <header className="relative z-20 mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-5">
         <div className="flex min-w-0 items-center gap-2 text-base font-bold tracking-tight sm:text-lg">
           <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand text-sm text-white shadow-[0_0_24px_rgba(239,49,36,0.45)]">
-            A
+            Б
           </span>
           <span className="sm:hidden">Старт</span>
-          <span className="hidden truncate sm:inline">Альфа-Бизнес: Старт</span>
+          <span className="hidden truncate sm:inline">Бизнес: Старт</span>
         </div>
         <div className="flex shrink-0 gap-2">
           <Link
@@ -99,14 +99,14 @@ export default function LandingPage() {
           >
             <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-brand/30 blur-3xl" />
             <p className="text-sm font-medium text-white/70">
-              Альфа-Бизнес: Старт · для тех, кто начинает в 18–25
+              Бизнес: Старт · для тех, кто начинает в 18–25 лет
             </p>
             <h1 className="mt-4 max-w-xl text-4xl font-bold leading-[1.05] tracking-tight text-white md:text-5xl lg:text-[3.4rem]">
-              Банк, с которым начинается бизнес
+              Сервис, с которым начинается бизнес
             </h1>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-white/85">
               Свой налог и копилка ЕНП за пару минут. Считаем НПД, проверяем
-              договоры и контрагентов — в чате, без канцелярита.
+              договоры и контрагентов прямо в чате.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -180,10 +180,10 @@ export default function LandingPage() {
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
               <h2 className="text-2xl font-bold text-white sm:text-3xl">
-                Что умеет Альфа-Бизнес: Старт
+                Возможности сервиса «Бизнес: Старт»
               </h2>
               <p className="mt-2 text-sm text-white/55">
-                Инструменты для первого бизнеса — в одном кабинете.
+                Инструменты для первого бизнеса в одном кабинете.
               </p>
             </div>
             <Link href="/register" className="text-sm font-medium text-brand hover:underline">
@@ -222,7 +222,7 @@ export default function LandingPage() {
             </h3>
             <p className="mt-3 text-ink/70">
               Пример заполненного кабинета: выписка, копилка, налог и путь. Свой
-              кабинет лучше открыть с нуля — за пару минут.
+              кабинет можно открыть с нуля за пару минут.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               <Link

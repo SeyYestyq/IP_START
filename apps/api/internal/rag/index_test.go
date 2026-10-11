@@ -29,10 +29,10 @@ func TestRetrieveGKAnd422(t *testing.T) {
 	}
 }
 
-func TestRetrieveAlfaRKO(t *testing.T) {
-	hits := Default().Retrieve("тарифы РКО Альфа-Банк ноль за обслуживание", 3)
+func TestRetrieveBankRKO(t *testing.T) {
+	hits := Default().Retrieve("тарифы РКО ноль за обслуживание", 3)
 	if len(hits) == 0 {
-		t.Fatal("expected Alfa RKO hits")
+		t.Fatal("expected RKO hits")
 	}
 }
 

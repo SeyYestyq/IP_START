@@ -4,7 +4,7 @@
 
 | Screen | Route | Purpose |
 |--------|-------|---------|
-| Landing / Pitch | `/` | Бренд + CTA; паттерны bento/carousel/phone-mock ([08](08-alfa-marketing-ui-patterns.md), реф. 02–04) |
+| Landing / Pitch | `/` | Бренд + CTA; паттерны bento/carousel/phone-mock ([08](08-marketing-ui-patterns.md), реф. 02–04) |
 | **Home / Dashboard** | `/app` | Decision-first: hero-налог, копилка, инсайты, composer ([07-dashboard-patterns.md](07-dashboard-patterns.md)) |
 | Chat | `/app/chat` | Полный диалог + GenUI |
 | Trackboard | `/app/journey` | CJM 1–5 (optional tab) |

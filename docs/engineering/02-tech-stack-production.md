@@ -7,7 +7,7 @@
 | React Native (TypeScript) | SuperApp Copilot surface |
 | Zustand | Client state |
 | React Query | Server state cache |
-| Alfa UI Kit / `@alfalab/core-components` (web) + RN kit | Brand components; Storybook: https://alfa-laboratory.github.io/core-components/ |
+| Корпоративный UI Kit / Core Components (web + RN) | Brand components |
 | react-native-markdown-display | Text fallback |
 | Victory Native / Recharts RN | Charts |
 | Reanimated + Lottie | Motion |

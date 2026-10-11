@@ -195,7 +195,7 @@ export default function ProfilePage() {
                 <div>
                   <dt className="text-ink/45">Счёт</dt>
                   <dd className="mt-0.5 font-medium">
-                    {form.bank_name || "Альфа-Банк"} {form.account_masked || ""}
+                    {form.bank_name || "Банк-Партнёр"} {form.account_masked || ""}
                   </dd>
                 </div>
               </div>

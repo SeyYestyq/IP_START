@@ -1,4 +1,4 @@
-# 3D Icon Pack — AI Business Copilot (Alfa style)
+# 3D Icon Pack — AI Business Copilot
 
 Глянцевые isometric 3D-иконки под витрину / Home / landing. Стиль: soft plastic, studio light, красный `#EF3124`, чистый светло-серый фон (кроме pastel badge).
 
@@ -33,17 +33,17 @@
 | `14-copilot-chat.png` | Чат Copilot |
 | `15-legalization-npd.png` | Легализация / НПД |
 | `16-cash-gap-alert.png` | Кассовый разрыв |
-| `17-alfa-badge-pastel.png` | Badge на pastel (landing tile) |
+| `17-badge-pastel.png` | Badge на pastel (landing tile) |
 | `18-copilot-hero-cluster.png` | Hero-кластер для лендинга |
 
 ## Промпт-формула (для догенерации)
 
 ```
-3D product icon for Alfa-Bank AI Business Copilot, [SUBJECT],
+3D product icon for Business Copilot, [SUBJECT],
 isometric, glossy soft-plastic materials, bright red #EF3124 accents,
 soft studio lighting, gentle contact shadow, premium fintech marketing
-render like modern Alfa-Bank 3D icons, clean light gray #F5F5F5
+render like modern 3D icons, clean light gray #F5F5F5
 background, centered, no readable text, no watermark, high detail
 ```
 
-Разбор UI-паттернов: [../../08-alfa-marketing-ui-patterns.md](../../08-alfa-marketing-ui-patterns.md).
+Разбор UI-паттернов: [../../08-marketing-ui-patterns.md](../../08-marketing-ui-patterns.md).

@@ -54,6 +54,6 @@ Home отвечает на **один** вопрос ЦА («сколько от
 
 ИИ тихий: summary / anomaly / next step. Каждый инсайт — источник + контроль пользователя ([Outcrowd 2026](https://medium.com/outcrowd/how-to-decide-what-your-financial-dashboard-actually-needs-in-2026-b4bddf5bc0ba)). Features find the user ([intent-driven financial UX](https://craftinnovations.global/future-of-financial-ux-webinar/)).
 
-## 13. Выглядеть как Альфа, не как «AI-стартап»
+## 13. Выглядеть как надёжный финтех, не как «AI-стартап»
 
-Красный `#EF3124`, платина `#D1D5D8`, белые панели, Interface Sans, воздух Альфа-Бизнес — [06-alfa-visual-language.md](06-alfa-visual-language.md). Delight purple/lime только на маркетинге.
+Красный `#EF3124`, платина `#D1D5D8`, белые панели, открытый ритм — [06-visual-language.md](06-visual-language.md). Delight purple/lime только на маркетинге.

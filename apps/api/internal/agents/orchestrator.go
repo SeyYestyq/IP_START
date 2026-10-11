@@ -10,14 +10,14 @@ import (
 	"time"
 	"unicode"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/adapters/memory"
-	"github.com/alphabank-case-champ/copilot-api/internal/calc"
-	"github.com/alphabank-case-champ/copilot-api/internal/domain"
-	"github.com/alphabank-case-champ/copilot-api/internal/guard"
-	"github.com/alphabank-case-champ/copilot-api/internal/llm"
-	"github.com/alphabank-case-champ/copilot-api/internal/rag"
-	"github.com/alphabank-case-champ/copilot-api/internal/sdui"
-	"github.com/alphabank-case-champ/copilot-api/internal/tools"
+	"github.com/SeyYestyq/copilot-api/internal/adapters/memory"
+	"github.com/SeyYestyq/copilot-api/internal/calc"
+	"github.com/SeyYestyq/copilot-api/internal/domain"
+	"github.com/SeyYestyq/copilot-api/internal/guard"
+	"github.com/SeyYestyq/copilot-api/internal/llm"
+	"github.com/SeyYestyq/copilot-api/internal/rag"
+	"github.com/SeyYestyq/copilot-api/internal/sdui"
+	"github.com/SeyYestyq/copilot-api/internal/tools"
 	"github.com/google/uuid"
 )
 
@@ -560,7 +560,7 @@ func (o *Orchestrator) unitEcon(ctx context.Context, msg string) []StreamEvent {
 			{
 				"id": "acquiring", "title": "Эквайринг",
 				"subtitle": "Карты в кабинете — выше средний чек",
-				"chat":     "Какой эквайринг Альфа-Банка подойдёт салону красоты?",
+				"chat":     "Какой эквайринг подойдёт салону красоты?",
 			},
 			{
 				"id": "rent", "title": "Платёжка аренды",
@@ -918,14 +918,14 @@ func (o *Orchestrator) generalMenuText(ctx context.Context) string {
 		rev = fmt.Sprintf(", оборот ~%s ₽/мес", formatRub(p.MonthlyRevenueEstimate))
 	}
 	return fmt.Sprintf(
-		"Я «Альфа-Бизнес: Старт» — помощник для %s (%s, %s%s).\n\n"+
+		"Я «Бизнес: Старт», помощник для %s (%s, %s%s).\n\n"+
 			"Могу помочь по делу:\n"+
 			"• налог НПД/УСН и срок через ЕНП\n"+
 			"• черновик платёжки и копилку под уплату\n"+
 			"• точку безубыточности кабинета\n"+
 			"• проверку ИНН (115-ФЗ) и риски в договоре аренды\n"+
 			"• тарифы РКО, кэшбек и частые вопросы микробизнеса\n\n"+
-			"Спросите своими словами — отвечу с опорой на базу знаний и расчёты. %s",
+			"Спросите своими словами: отвечу с опорой на базу знаний и расчёты. %s",
 		p.DisplayName, sphere, city, rev, domain.Disclaimer,
 	)
 }

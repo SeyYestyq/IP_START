@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/adapters/memory"
-	"github.com/alphabank-case-champ/copilot-api/internal/config"
-	"github.com/alphabank-case-champ/copilot-api/internal/httpserver"
+	"github.com/SeyYestyq/copilot-api/internal/adapters/memory"
+	"github.com/SeyYestyq/copilot-api/internal/config"
+	"github.com/SeyYestyq/copilot-api/internal/httpserver"
 )
 
 func main() {

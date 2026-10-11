@@ -4,17 +4,17 @@
 
 | File | Description |
 |------|-------------|
-| [source-pdfs/AlfaBank_Copilot_Developer_PRD.pdf](source-pdfs/AlfaBank_Copilot_Developer_PRD.pdf) | Master Blueprint & PRD: functions, UI, stack, prompts, tools, guardrails, roadmap |
-| [source-pdfs/AlfaBank_Business_Copilot_Master_Strategy.pdf](source-pdfs/AlfaBank_Business_Copilot_Master_Strategy.pdf) | Strategy 2026+: TAM, CJM×10, agents, SWOT, GTM, monetization, risks |
+| [source-pdfs/Business_Copilot_Developer_PRD.pdf](source-pdfs/Business_Copilot_Developer_PRD.pdf) | Master Blueprint & PRD: functions, UI, stack, prompts, tools, guardrails, roadmap |
+| [source-pdfs/Business_Copilot_Master_Strategy.pdf](source-pdfs/Business_Copilot_Master_Strategy.pdf) | Strategy 2026+: TAM, CJM×10, agents, SWOT, GTM, monetization, risks |
 
 ## Championship case (screenshots / brief)
 
 Ключевые тезисы, использованные в `docs/strategy/*` и `docs/product/*`:
 
-- Контекст: Платежный бизнес Альфы; ЦА 17–25; средний клиент ~42; фрагментированный путь новичка.
+- Контекст: Платежный бизнес банка-партнёра; ЦА 17–25; средний клиент ~42; фрагментированный путь новичка.
 - Образ результата: фокус 17–25; 2–3 отрасли (HoReCa, beauty, retail…); боли; осмысленный ИИ; продукты ПБ в пути; пилот РФ.
 - Критерии успеха: реальное понимание ЦА; польза банка; long-term стратегия; ИИ на болях; интеграция ПБ; новые продукты; ограничения банка.
-- Ограничения: внешний AI на идее ок → финал совместим с Альфой; без репутационных/юр. рисков.
+- Ограничения: внешний AI на идее ок; финал совместим с банковской инфраструктурой; без репутационных и юридических рисков.
 - Постановка: 8 шагов (ЦА → отрасли → конкуренты → инсайты → стратегия+AI → промо → продукты → эффект).
 - Критерии оценки: качество исследования ЦА/рынка; структура и логика; роль ИИ в стратегии.
 - Исследование ЦА (Telegram): beauty masters; Value Proposition Canvas; боли налогов/легализации; ожидание all-in-one + сильный UX; конкурент Т-Банк.
@@ -32,18 +32,15 @@
 - [Fintech UX Guide 2026 — Fuselab](https://fuselabcreative.com/fintech-ux-design-guide-2026-user-experience/) — proactive insights.
 - Multi-agent RAG references: LangGraph supervisor patterns (e.g. production RAG + FastAPI + Next.js open templates) — отражено в `docs/architecture/04-agentic-rag.md`.
 
-## Alfa design system & brand (July 2026 session)
+## Fintech design system & standards (July 2026 session)
 
-Отражено в `docs/design/06-alfa-visual-language.md` и обновлениях `01-design-system.md`:
+Отражено в `docs/design/06-visual-language.md` и обновлениях `01-design-system.md`:
 
-- [Корпоративные веб-стандарты alfabank.ru (Art. Lebedev PDF)](https://www.artlebedev.com/alfabank/guides/Alfa-guides.pdf) — Альфа-красный `#EF3124`, платиновый `#D1D5D8`, правила логотипа.
-- [alfa-laboratory/core-components](https://github.com/alfa-laboratory/core-components) — актуальная UI-библиотека; [Storybook](https://alfa-laboratory.github.io/core-components/).
-- [arui-feather](https://github.com/alfa-laboratory/arui-feather) — deprecated Feather; не использовать для нового кода.
-- [alfa-ui-primitives](https://github.com/alfa-laboratory/alfa-ui-primitives) — design tokens (web/iOS/Android).
-- [Habr: иконки и Alfa Interface Sans в Альфа-Бизнес](https://habr.com/ru/companies/alfa/articles/1048062/) — лёгкость, воздух, фирменный UI-шрифт.
-- [Habr: боковое меню Альфа-Бизнес](https://habr.com/ru/companies/alfa/articles/809991/) — SharedUI, белые карточки, F-паттерн.
-- [core-components: Alfa Interface Sans](https://github.com/core-ds/core-components/commit/b832d8507355178a2b2d3fa24220be6e1f9d8ee3) — подключение шрифта / Typography.
-- [Feather by Alfa-Bank (catalog)](https://www.designsystemcookbooks.com/system/alfa-bank) — историческое имя DS «Feather».
+- Стандарты палитры — красный `#EF3124`, платиновый `#D1D5D8`.
+- Дизайн-токены и примитивы (web/iOS/Android).
+- Современные принципы построения банковского UI: лёгкость, воздух, фирменный гротеск.
+- Боковое и верхнее меню: SharedUI, белые карточки, F-паттерн.
+- Подключение современного гротеска Manrope / system-ui.
 
 ## Modern fintech dashboards (July 2026 session)
 
@@ -65,8 +62,8 @@
 | Strategy CJM / GTM / KPI | `strategy/*` |
 | ЦА beauty / VPC | `strategy/02-target-audience-value-canvas.md` |
 | GenUI industry practice | `design/04-generative-ui-catalog.md`, `design/02-ux-principles.md` |
-| Alfa brand / DS | `design/06-alfa-visual-language.md`, `design/01-design-system.md` |
-| Alfa UI screenshots 2026 | `design/references/alfa-web-2026/`, `design/08-alfa-marketing-ui-patterns.md` |
+| Дизайн-система / визуальный язык | `design/06-visual-language.md`, `design/01-design-system.md` |
+| Скриншоты и паттерны UI 2026 | `design/references/web-2026/`, `design/08-marketing-ui-patterns.md` |
 | Dashboard UX 2025–26 | `design/07-dashboard-patterns.md` |
 | Demo cut | `product/01-prd-demo-mvp.md`, `superpowers/plans/*` |
 | Demo Go backend | `architecture/09-demo-backend-go.md` (decision: Go, not FastAPI) |

@@ -1,4 +1,4 @@
-# Документация — Альфа-Бизнес: Старт
+# Документация — Бизнес: Старт
 
 Навигация по Single Source of Truth для стратегии, ТЗ, архитектуры, дизайна и разработки.
 
@@ -59,10 +59,10 @@
 | [design/03-screen-map-and-flows.md](design/03-screen-map-and-flows.md) | Экраны и флоу |
 | [design/04-generative-ui-catalog.md](design/04-generative-ui-catalog.md) | SDUI catalog |
 | [design/05-motion-voice-tone.md](design/05-motion-voice-tone.md) | Motion, voice & tone |
-| [design/06-alfa-visual-language.md](design/06-alfa-visual-language.md) | Как выглядит дизайн Альфы / Альфа-Бизнес |
+| [design/06-visual-language.md](design/06-visual-language.md) | Визуальный язык и дизайн-система |
 | [design/07-dashboard-patterns.md](design/07-dashboard-patterns.md) | Топовые fintech-дашборды → Home Copilot |
-| [design/08-alfa-marketing-ui-patterns.md](design/08-alfa-marketing-ui-patterns.md) | Паттерны UI с референсов alfabank.ru |
-| `design/references/alfa-web-2026/` | Скриншоты-референсы (7 шт.) |
+| [design/08-marketing-ui-patterns.md](design/08-marketing-ui-patterns.md) | Паттерны интерфейса и маркетинговые экраны |
+| `design/references/web-2026/` | Скриншоты-референсы (7 шт.) |
 | [`design/assets/3d-icons/`](design/assets/3d-icons/) | Пак 3D-иконок Copilot (18 шт.) |
 
 ### Engineering
@@ -92,7 +92,7 @@
 Решение успешно, если оно:
 
 1. Основано на реальном понимании молодых предпринимателей.
-2. Показывает пользу Альфа-Банка.
+2. Показывает пользу для предпринимателя и банка-партнёра.
 3. Даёт долгосрочную стратегию привлечения / сопровождения / удержания.
 4. Использует ИИ для конкретных болей.
 5. Встраивает продукты Платежного бизнеса в путь.

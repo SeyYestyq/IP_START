@@ -9,7 +9,7 @@
 | TypeScript | 5.x | Strict |
 | Tailwind CSS | 4.x / 3.4+ | Styling |
 | Framer Motion | latest | Motion |
-| Fonts | Alfa Interface Sans (CDN) or Manrope | Visual parity with Альфа-Бизнес |
+| Fonts | Manrope or system-ui | Modern fintech typography |
 | Zod | 3.x | Shared schemas with API |
 | Recharts | latest | Unit economics |
 | Playwright | latest | E2E smoke |

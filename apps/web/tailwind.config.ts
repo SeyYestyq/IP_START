@@ -25,7 +25,6 @@ export default {
       },
       fontFamily: {
         sans: [
-          "Alfa Interface Sans",
           "Manrope",
           "system-ui",
           "sans-serif",

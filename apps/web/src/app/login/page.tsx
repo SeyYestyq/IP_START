@@ -37,7 +37,7 @@ function LoginInner() {
     <main className="relative mx-auto flex min-h-screen max-w-md flex-col justify-center overflow-hidden px-4 py-10">
       <div className="pointer-events-none absolute -right-4 top-16 h-40 w-40 opacity-80">
         <Image
-          src="/icons/3d/17-alfa-badge-pastel.png"
+          src="/icons/3d/17-badge-pastel.png"
           alt=""
           fill
           className="object-contain drop-shadow-sm"
@@ -51,20 +51,20 @@ function LoginInner() {
       </Link>
       <div className="relative z-10 mt-8 flex items-center gap-2">
         <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand text-sm font-bold text-white shadow-[0_0_20px_rgba(239,49,36,0.35)]">
-          A
+          Б
         </span>
         <div>
-          <p className="font-bold">Альфа-Бизнес: Старт</p>
+          <p className="font-bold">Бизнес: Старт</p>
           <p className="text-sm text-ink/55">Кабинет для первого бизнеса</p>
         </div>
       </div>
       <h1 className="relative z-10 mt-10 text-3xl font-bold">Вход</h1>
       <p className="relative z-10 mt-2 text-sm text-ink/60">
-        Войдите по телефону, который указали при регистрации. Без SMS на стенде.
+        Войдите по номеру телефона, указанному при регистрации. Без SMS на стенде.
       </p>
 
       <label className="relative z-10 mt-6 block text-sm">
-        <span className="text-ink/60">Телефон — ваш логин</span>
+        <span className="text-ink/60">Номер телефона</span>
         <input
           value={phone}
           onChange={(e) => setPhone(e.target.value)}

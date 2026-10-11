@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/guard"
-	"github.com/alphabank-case-champ/copilot-api/internal/sdui"
+	"github.com/SeyYestyq/copilot-api/internal/guard"
+	"github.com/SeyYestyq/copilot-api/internal/sdui"
 )
 
-const copilotVoice = `Ты помощник продукта «Альфа-Бизнес: Старт» для молодых предпринимателей (часто beauty / НПД / ИП).
+const copilotVoice = `Ты помощник продукта «Бизнес: Старт» для начинающих предпринимателей (часто beauty / НПД / ИП).
 Пиши по-русски: ясно, конкретно, без воды и без канцелярита.
-Тон — опытный наставник банка: поддерживаешь, но называешь риски прямо.
-Не называй себя Copilot, AI Business Copilot или «демо»; представляйся как Альфа-Бизнес: Старт.`
+Тон — опытный наставник: поддерживаешь, но называешь риски прямо.
+Не называй себя Copilot, AI Business Copilot или «демо»; представляйся как Бизнес: Старт.`
 
 const answerShape = `Структура ответа (если уместно):
 1) Прямой ответ в 1–2 предложениях

@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/domain"
+	"github.com/SeyYestyq/copilot-api/internal/domain"
 	"github.com/google/uuid"
 )
 
@@ -93,7 +93,7 @@ func NewSeededWithToken(mashaToken string) *Store {
 			CJMLevel:               4,
 			PersonaKey:             "masha_nails",
 			AccountMasked:          "···4582",
-			BankName:               "Альфа-Банк",
+			BankName:               "Банк-Партнёр",
 			RegisteredAt:           now.AddDate(0, -4, -12).Format("2006-01-02"),
 			NPDStatus:              "active",
 		},
@@ -215,7 +215,7 @@ func (s *Store) Register(in RegisterInput) (token string, profile domain.Profile
 		CJMLevel:               1,
 		PersonaKey:             "custom",
 		AccountMasked:          "···0000",
-		BankName:               "Альфа-Банк",
+		BankName:               "Банк-Партнёр",
 		RegisteredAt:           now.Format("2006-01-02"),
 		NPDStatus:              map[bool]string{true: "active", false: "none"}[regime == "NPD"],
 	}
@@ -583,7 +583,7 @@ func seedTxns(now time.Time) []domain.Transaction {
 		{"Реклама VK Ads", "ads", "out", 890, 8, "", "Продвижение кабинета"},
 		{"Анна · повтор", "services", "in", 2500, 9, "", ""},
 		{"Дарья · маникюр", "services", "in", 2300, 10, "", ""},
-		{"Комиссия эквайринга", "fees", "out", 420, 10, "", "Альфа-Касса"},
+		{"Комиссия эквайринга", "fees", "out", 420, 10, "", "Смарт-Касса"},
 		{"Ирина · снятие", "services", "in", 3500, 11, "", ""},
 		{"Елена · педикюр", "services", "in", 3000, 12, "", ""},
 		{"Расходники Ozone", "supplies", "out", 1680, 13, "", "Салфетки, антисептик"},

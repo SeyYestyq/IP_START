@@ -1,8 +1,8 @@
-# Альфа-Бизнес: Старт — рабочая документация
+# Бизнес: Старт — рабочая документация
 
 Практический гайд по **демо-продукту** в этом репозитории. Стратегия, PRD и production-blueprint лежат отдельно: [00-README.md](00-README.md).
 
-Продуктовое имя в UI: **«Альфа-Бизнес: Старт»**. Это не официальная консультация банка или ФНС.
+Продуктовое имя в UI: **«Бизнес: Старт»**. Это не официальная консультация банка или ФНС.
 
 ---
 
@@ -144,7 +144,7 @@ deploy/           nginx/compose заготовки
 - [ops/vps-bot-project-swap-reversible.md](ops/vps-bot-project-swap-reversible.md)
 - [engineering/07-server-deployment.md](engineering/07-server-deployment.md)
 
-Каталог AlphaBank на сервере: `/opt/AlphaBank_case_champ` (дерево можно оставить).  
+Каталог приложения на сервере: `/opt/business-start` (дерево можно оставить).  
 Прежний стек: `/opt/B.O.T.-Project`, systemd `bot-project.service`, volumes `BOT_project_pgdata`.
 
 Секреты (`.env`, пароли SSH) в git не класть.

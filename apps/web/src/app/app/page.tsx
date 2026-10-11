@@ -112,7 +112,7 @@ export default function HomePage() {
     <main className="mx-auto max-w-3xl px-4 py-6 pb-8">
       <header className="flex items-center justify-between gap-3">
         <div>
-          <p className="text-sm text-ink/50">Альфа-Бизнес: Старт · кабинет</p>
+          <p className="text-sm text-ink/50">Бизнес: Старт · кабинет</p>
           <h1 className="text-2xl font-bold">
             Привет{data ? `, ${data.profile.display_name}` : ""}
           </h1>

@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/sdui"
+	"github.com/SeyYestyq/copilot-api/internal/sdui"
 )
 
 func TestTaxCardGolden(t *testing.T) {

@@ -3,7 +3,7 @@ package agents
 import (
 	"testing"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/rag"
+	"github.com/SeyYestyq/copilot-api/internal/rag"
 )
 
 func TestLooksLikeWidgetGarbage(t *testing.T) {

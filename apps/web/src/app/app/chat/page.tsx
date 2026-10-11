@@ -52,7 +52,7 @@ function ChatInner() {
   const fileRef = useRef<HTMLInputElement>(null);
 
   const disclaimer =
-    "Альфа-Бизнес: Старт. Рекомендации справочные — финальное решение за вами.";
+    "Бизнес: Старт. Рекомендации носят справочный характер, финальное решение за вами.";
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -614,7 +614,7 @@ function ChatInner() {
           </Link>
           <h1 className="mt-1 flex items-center gap-2 text-xl font-bold">
             <Sparkles className="h-5 w-5 text-brand" aria-hidden />
-            Альфа-Бизнес: Старт
+            Бизнес: Старт
           </h1>
           <p className="mt-0.5 text-xs text-ink/50">
             Налоги, платежи, договоры и подсказки по делу

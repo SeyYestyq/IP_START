@@ -59,13 +59,13 @@ export default function RegisterPage() {
       <Link href="/" className="text-sm text-ink/50 hover:text-ink">
         ← На сайт
       </Link>
-      <p className="mt-6 text-sm font-bold text-ink">Альфа-Бизнес: Старт</p>
+      <p className="mt-6 text-sm font-bold text-ink">Бизнес: Старт</p>
       <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-brand">
         Шаг {step} из 3
       </p>
       <h1 className="mt-2 text-3xl font-bold tracking-tight">Открыть кабинет</h1>
       <p className="mt-2 text-sm text-ink/60">
-        Для тех, кто начинает бизнес в 18–25. Укажите данные — кабинет откроется
+        Для тех, кто начинает бизнес в 18–25 лет. Укажите данные, и кабинет откроется
         сразу.
       </p>
 
@@ -90,7 +90,7 @@ export default function RegisterPage() {
             />
           </label>
           <label className="block text-sm">
-            <span className="text-ink/60">Телефон — ваш логин</span>
+            <span className="text-ink/60">Номер телефона</span>
             <input
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
@@ -194,7 +194,7 @@ export default function RegisterPage() {
           <p className="text-sm font-medium text-ink/70">Налоговый режим</p>
           {(
             [
-              ["NPD", "НПД — самозанятость"],
+              ["NPD", "НПД (самозанятость)"],
               ["UNDECIDED", "Пока думаю"],
               ["IP", "ИП"],
             ] as const

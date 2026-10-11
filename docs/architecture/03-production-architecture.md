@@ -6,7 +6,7 @@
 
 ```mermaid
 flowchart TB
-  RN[ReactNative_AlfaBusiness]
+  RN[ReactNative_BusinessApp]
   Kong[APIGateway_Kong]
   GoRouter[Go_CopilotBFF]
   AI[Python_AI_Swarm]
@@ -67,7 +67,7 @@ Consumer Alert Worker считает признаки кассового раз�
 
 - React Native (TypeScript) в SuperApp.  
 - State: Zustand + React Query.  
-- UI Kit: Alfa + Markdown + charts (Victory/Recharts-аналоги RN).  
+- UI Kit: Core DS + Markdown + charts (Victory/Recharts-аналоги RN).  
 - GenUI: реестр нативных компонентов 1:1 с web SDUI types.
 
 ## Network & security zones

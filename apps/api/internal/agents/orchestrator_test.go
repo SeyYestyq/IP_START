@@ -3,7 +3,7 @@ package agents
 import (
 	"testing"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/adapters/memory"
+	"github.com/SeyYestyq/copilot-api/internal/adapters/memory"
 )
 
 func TestTaxProducesSDUI(t *testing.T) {

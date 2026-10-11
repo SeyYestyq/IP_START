@@ -193,7 +193,7 @@ export function taxHintForTxn(txn: TxnLike): {
   };
 }
 
-const PICK_KEY = "alfa_start_cashback_pick";
+const PICK_KEY = "business_start_cashback_pick";
 
 export type CashbackPick = {
   id: string;

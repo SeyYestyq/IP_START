@@ -4,19 +4,19 @@
 
 | Слой | Где | Характер |
 |------|-----|----------|
-| **Bank Trust** | Чат, суммы, платежи, налоги | Альфа-красная дисциплина, воздух, минимум декора |
+| **Bank Trust** | Чат, суммы, платежи, налоги | Фирменный красный акцент, воздух, минимум декора |
 | **Championship Delight** | Landing, первый onboarding splash | Энергия кейса (purple/lime), не переносить в money UI |
 
-## Цвета (PRD + бренд Альфы)
+## Цвета (PRD + палитра)
 
-Официальный **Альфа-красный** `#EF3124` и **Альфа-платиновый** `#D1D5D8` зафиксированы в [веб-стандартах alfabank.ru](https://www.artlebedev.com/alfabank/guides/Alfa-guides.pdf). Полный визуальный контекст: [06-alfa-visual-language.md](06-alfa-visual-language.md).
+Фирменный красный `#EF3124` и платиновый `#D1D5D8`. Полный визуальный контекст: [06-visual-language.md](06-visual-language.md).
 
 | Token | Hex | Use |
 |-------|-----|-----|
-| `--color-primary` | `#EF3124` | CTA, акценты, нотификации (Альфа-красный) |
+| `--color-primary` | `#EF3124` | CTA, акценты, нотификации (фирменный красный) |
 | `--color-platinum` | `#D1D5D8` | Вторичные плашки, dividers, inactive chrome |
 | `--color-ink` | `#0B1117` | Заголовки, dark bg |
-| `--color-surface` | `#FFFFFF` | Карточки, light bg (паттерн Альфа-Бизнес) |
+| `--color-surface` | `#FFFFFF` | Карточки, light bg |
 | `--color-muted` | `#F2F3F5` | Фон чата / canvas, disabled |
 | `--color-success` | `#00C853` | Успех, green compliance |
 
@@ -32,22 +32,21 @@
 
 ## Типографика
 
-Продукты Альфы (Альфа-Бизнес) переходят на **Alfa Interface Sans** ([Habr](https://habr.com/ru/companies/alfa/articles/1048062/), [core-components](https://github.com/core-ds/core-components/commit/b832d8507355178a2b2d3fa24220be6e1f9d8ee3)).
+В продуктах используется современный гротеск (Manrope, system-ui).
 
 | Role | Font | Notes |
 |------|------|-------|
-| UI / chat / dashboard | **Alfa Interface Sans** (CDN банка) или Manrope fallback | 16px body, line-height 150%; ритм «легче и воздушнее» как в редизайне Альфа-Бизнес |
-| Display / marketing | Slab/display (Alfa Slab One если лицензия) или тот же Interface Bold | Только landing / чемпионат |
+| UI / chat / dashboard | Manrope, system-ui | 16px body, line-height 150%; лёгкий и открытый ритм |
+| Display / marketing | Manrope Bold | Только landing / промо |
 | Figures | Tabular nums | Суммы налогов и платежей — крупнейший акцент иерархии |
 
 Не строить UI только на Inter. Не использовать slab в money UI.
 
-**Production:** по возможности `@alfalab/core-components` Typography + tokens ([Storybook](https://alfa-laboratory.github.io/core-components/)).  
-**Demo:** CSS-токены + CDN/fallback шрифт; визуальный паритет важнее npm-зависимости.
+**Demo:** CSS-токены + шрифт Manrope; визуальный паритет и аккуратность.
 
 ## Spacing & radius
 
-По референсам сайта Альфы ([08-alfa-marketing-ui-patterns.md](08-alfa-marketing-ui-patterns.md)):
+По референсам UI ([08-marketing-ui-patterns.md](08-marketing-ui-patterns.md)):
 
 - База 4px; внутренний padding карточек 16–24.  
 - **Витрина / landing / Home rows:** radius карточек **24–32px**; pills `999px`.  
@@ -57,14 +56,14 @@
 
 ## Elevation
 
-- Мягкая рассеянная тень **или** разделение тоном (canvas vs surface) — как на alfabank.ru.  
+- Мягкая рассеянная тень **или** разделение тоном (canvas vs surface).  
 - Без тяжёлого multi-layer glow.
 
 ## Icons & 3D
 
 | Зона | Стиль |
 |------|--------|
-| Landing / promo | Glossy 3D / clay (карта, монета, %) — реф. `references/alfa-web-2026/` |
+| Landing / promo | Glossy 3D / clay (карта, монета, %) — реф. `references/web-2026/` |
 | Home service rows | Компактный 3D справа (как «Сервисы») |
 | Chat / compliance | Линейные 24px или простой светофор; без emoji как UI |
 
@@ -79,7 +78,7 @@
 `ButtonPrimary`, `ButtonGhost`, `ChatBubble`, `Composer`, `DisclaimerBar`, `CjmStepper`, `HeroMetric`, `InsightRow`, плюс GenUI registry.
 
 Дашборд Home: [07-dashboard-patterns.md](07-dashboard-patterns.md) (Role–Metric–Density–Action).  
-UI-паттерны Альфы: [08-alfa-marketing-ui-patterns.md](08-alfa-marketing-ui-patterns.md) + скрины в `references/alfa-web-2026/`.
+UI-паттерны: [08-marketing-ui-patterns.md](08-marketing-ui-patterns.md) + скрины в `references/web-2026/`.
 
 Доп. компоненты: `SegmentedPill`, `ServiceRow`, `PastelPromoCard`, `InvertCtaCard` (чёрная row как «Оформить самозанятость»).
 

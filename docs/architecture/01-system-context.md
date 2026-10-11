@@ -2,7 +2,7 @@
 
 ## Назначение
 
-AI Business Copilot помогает молодому предпринимателю вести легальный микробизнес: налоги, документы, платежи — через диалог и Generative UI, с опорой на продукты Платежного бизнеса Альфа-Банка.
+AI Business Copilot помогает молодому предпринимателю вести легальный микробизнес: налоги, документы, платежи — через диалог и Generative UI, с опорой на продукты платёжного бизнеса банка.
 
 ## Контекстная диаграмма
 
@@ -10,14 +10,14 @@ AI Business Copilot помогает молодому предпринимате
 flowchart TB
   User[YoungEntrepreneur]
   Copilot[AIBusinessCopilot]
-  Alfa[AlfaBankCore]
+  Bank[BankCore]
   FNS[FNS_SMEV]
   Gosuslugi[Gosuslugi_Goskey]
   KB[KnowledgeBase_NK_Tariffs]
   LLM[LLMInference]
 
   User --> Copilot
-  Copilot --> Alfa
+  Copilot --> Bank
   Copilot --> FNS
   Copilot --> Gosuslugi
   Copilot --> KB
@@ -32,7 +32,7 @@ flowchart TB
 | Сотрудник банка / поддержка | Handoff, аудит рекомендаций |
 | Комплаенс / ИБ | Контроль рисков, маскирование, логи |
 | ФНС / СМЭВ | Официальные данные долга/регистрации |
-| Платформа Альфы | РКО, эквайринг, кредиты, 115-ФЗ |
+| Платформа банка | РКО, эквайринг, кредиты, 115-ФЗ |
 
 ## Внешние системы
 

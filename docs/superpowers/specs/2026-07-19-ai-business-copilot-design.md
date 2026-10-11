@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-19  
 **Status:** Approved for documentation phase; implementation follows demo plan  
-**Sources:** AlfaBank Developer PRD, Master Strategy, championship case, ЦА research
+**Sources:** Business Copilot Developer PRD, Master Strategy, championship case, ЦА research
 
 ## Problem
 
@@ -12,7 +12,7 @@
 
 1. Доказать на качественном **web demo**, что Copilot закрывает боли легализации/налогов/платежей через Generative UI.  
 2. Зафиксировать **production blueprint** (RN, микросервисы, Kafka, on-prem LLM) с общими контрактами.  
-3. Связать путь пользователя с продуктами Платежного бизнеса Альфа-Банка.  
+3. Связать путь пользователя с продуктами платёжного бизнеса банка.  
 4. Соблюсти юр./репутационные ограничения (RAG, HITL, дисклеймеры).
 
 ## Non-goals (now)
@@ -54,9 +54,9 @@ Multi-agent RAG Copilot: Router → Tax / Legal / CFO / Onboarding. Ответы
 
 Дополнено research (2026-07-19):
 
-- Визуальный язык Альфы / Альфа-Бизнес → `docs/design/06-alfa-visual-language.md` (`#EF3124`, платина, Interface Sans, core-components).
+- Визуальный язык интерфейса → `docs/design/06-visual-language.md` (`#EF3124`, платина, гротеск).
 - Decision-first Home dashboard → `docs/design/07-dashboard-patterns.md` (Role–Metric–Density–Action, hybrid ask+structure).
-- Актуальные скрины alfabank.ru → `docs/design/08-alfa-marketing-ui-patterns.md` + `docs/design/references/alfa-web-2026/` (bento, pastel, 3D, pill segments, services rows).
+- Актуальные скрины UI → `docs/design/08-marketing-ui-patterns.md` + `docs/design/references/web-2026/` (bento, pastel, 3D, pill segments, services rows).
 
 ## Architecture
 
@@ -74,7 +74,7 @@ Multi-agent RAG Copilot: Router → Tax / Legal / CFO / Onboarding. Ответы
 
 ## Open points (non-blocking)
 
-- Точная лицензия шрифта Alfa Slab One → fallback Manrope/Geist.  
+- Выбор акцентных шрифтов → основной стек Manrope / system-ui.  
 - Выбор Qdrant vs Milvus — за ИБ банка.  
 - Установка `parallel-cli` для углублённого research — опционально.
 

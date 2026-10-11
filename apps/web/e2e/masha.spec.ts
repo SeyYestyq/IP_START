@@ -2,8 +2,8 @@ import { test, expect } from "@playwright/test";
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => {
-    localStorage.setItem("alfa_start_token", "demo-masha-token");
-    localStorage.setItem("alfa_start_user_id", "usr_masha_kazan");
+    localStorage.setItem("business_start_token", "demo-masha-token");
+    localStorage.setItem("business_start_user_id", "usr_masha_kazan");
     localStorage.setItem("copilot_token", "demo-masha-token");
     localStorage.setItem("copilot_user_id", "usr_masha_kazan");
   });
@@ -11,9 +11,9 @@ test.beforeEach(async ({ page }) => {
 
 test("landing shows brand CTA", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByText(/Альфа-Бизнес: Старт/i).first()).toBeVisible();
+  await expect(page.getByText(/Бизнес: Старт/i).first()).toBeVisible();
   await expect(
-    page.getByRole("heading", { name: /Банк, с которым начинается бизнес/i }),
+    page.getByRole("heading", { name: /Сервис, с которым начинается бизнес/i }),
   ).toBeVisible();
   await expect(page.getByRole("link", { name: /Открыть кабинет/i }).first()).toBeVisible();
 });

@@ -1,5 +1,5 @@
-const TOKEN_KEY = "alfa_start_token";
-const USER_KEY = "alfa_start_user_id";
+const TOKEN_KEY = "business_start_token";
+const USER_KEY = "business_start_user_id";
 const LEGACY_TOKEN_KEY = "copilot_token";
 const LEGACY_USER_KEY = "copilot_user_id";
 const EXAMPLE_TOKEN =
@@ -7,16 +7,12 @@ const EXAMPLE_TOKEN =
 
 export function getToken(): string | null {
   if (typeof window === "undefined") return null;
-  return (
-    localStorage.getItem(TOKEN_KEY) || localStorage.getItem(LEGACY_TOKEN_KEY)
-  );
+  return localStorage.getItem(TOKEN_KEY) || localStorage.getItem(LEGACY_TOKEN_KEY);
 }
 
 export function getUserId(): string | null {
   if (typeof window === "undefined") return null;
-  return (
-    localStorage.getItem(USER_KEY) || localStorage.getItem(LEGACY_USER_KEY)
-  );
+  return localStorage.getItem(USER_KEY) || localStorage.getItem(LEGACY_USER_KEY);
 }
 
 export function hasSession(): boolean {
@@ -44,7 +40,7 @@ export function clearSession() {
   localStorage.removeItem(USER_KEY);
   localStorage.removeItem(LEGACY_TOKEN_KEY);
   localStorage.removeItem(LEGACY_USER_KEY);
-  localStorage.removeItem("alfa_start_session");
+  localStorage.removeItem("business_start_session");
   localStorage.removeItem("copilot_session");
 }
 

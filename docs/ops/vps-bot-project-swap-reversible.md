@@ -1,8 +1,8 @@
-# VPS inventory + reversible swap plan (bot-project.ru → AlphaBank Copilot)
+# VPS inventory + reversible swap plan (bot-project.ru → Бизнес: Старт Copilot)
 
 Date inspected: 2026-07-19  
 Host: `155.212.170.159` (`vps.bot-project.ru`)  
-Status of this session: **cutover applied 2026-07-19** — AlphaBank live on `bot-project.ru`; BOT parked (volumes kept).
+Status of this session: **cutover applied 2026-07-19** — Бизнес: Старт live on `bot-project.ru`; BOT parked (volumes kept).
 
 > Secrets (SSH password, `.env` values, DB passwords) are **not** stored in this file. Keep them only in a password manager.
 
@@ -57,9 +57,9 @@ Existing rollback artifacts already on host:
 
 ---
 
-## 2. AlphaBank Copilot vs this host
+## 2. Бизнес: Старт Copilot vs this host
 
-Local compose (`docker-compose.yml` in AlphaBank repo):
+Local compose (`docker-compose.yml` in repo):
 
 - `web` :3000, `api` :8080 (currently published on all interfaces in repo — **must bind `127.0.0.1` on VPS**)
 - Memory store (no Postgres required for demo)
@@ -67,8 +67,8 @@ Local compose (`docker-compose.yml` in AlphaBank repo):
 
 Path prefix difference:
 
-| BOT (now) | AlphaBank |
-|-----------|-----------|
+| BOT (now) | Бизнес: Старт |
+|-----------|---------------|
 | API at `/api/...` → host `:8100` | API at `/api/v1/...` → should be `:8080` (or remap) |
 | Web `:3100` | Web `:3000` (suggest host `:3200` while testing) |
 
@@ -76,7 +76,7 @@ Path prefix difference:
 
 ## 3. Recommended fast + safe cutover strategy
 
-**Do not delete BOT volumes.** Prefer: stop BOT stack → park it → deploy AlphaBank on **same host ports BOT used** (`3100`/`8100`) so nginx domain stays almost unchanged → document every file touched.
+**Do not delete BOT volumes.** Prefer: stop BOT stack → park it → deploy Бизнес: Старт on **same host ports BOT used** (`3100`/`8100`) so nginx domain stays almost unchanged → document every file touched.
 
 ### Phase A — backup (before any stop)
 
@@ -125,14 +125,14 @@ docker compose -f BOT_project/docker-compose.yml --env-file .env down
 docker volume ls | grep BOT_project
 ```
 
-### Phase C — deploy AlphaBank beside parked BOT
+### Phase C — deploy app beside parked BOT
 
 Suggested layout:
 
 ```text
-/opt/AlphaBank_case_champ/     # git clone or rsync of this repo
-/opt/AlphaBank_case_champ/.env # production env (not in git)
-/etc/systemd/system/alphabank-copilot.service
+/opt/business-start/     # git clone or rsync of this repo
+/opt/business-start/.env # production env (not in git)
+/etc/systemd/system/business-copilot.service
 ```
 
 Host port mapping for **minimal nginx delta** (reuse BOT’s local ports):
@@ -144,7 +144,7 @@ Host port mapping for **minimal nginx delta** (reuse BOT’s local ports):
 
 Override via compose override file (do **not** change BOT compose):
 
-`/opt/AlphaBank_case_champ/docker-compose.vps.yml` (to create at deploy time):
+`/opt/business-start/docker-compose.vps.yml` (to create at deploy time):
 
 ```yaml
 services:
@@ -167,11 +167,11 @@ services:
 Build/start:
 
 ```bash
-cd /opt/AlphaBank_case_champ
+cd /opt/business-start
 docker compose -f docker-compose.yml -f docker-compose.vps.yml up -d --build
 ```
 
-### Phase D — nginx for AlphaBank (domain `bot-project.ru`)
+### Phase D — nginx for app (domain `bot-project.ru`)
 
 Keep server_name + TLS paths. Adjust locations:
 
@@ -193,8 +193,8 @@ location /api/ {
 }
 ```
 
-4. Relax / remove BOT-specific CSP `connect-src` if it blocks Alfa CDN fonts — or allow `https://alfabank.servicecdn.ru`.
-5. Remove or leave unused `/ws` (AlphaBank uses SSE, not that WS path).
+4. Relax / remove BOT-specific CSP `connect-src` if it blocks fonts.
+5. Remove or leave unused `/ws` (app uses SSE, not that WS path).
 
 Apply:
 
@@ -215,10 +215,10 @@ curl -sS -o /dev/null -w "%{http_code}\n" https://bot-project.ru/
 ## 4. Full rollback (return BOT)
 
 ```bash
-# 1) Stop AlphaBank
-cd /opt/AlphaBank_case_champ
+# 1) Stop app
+cd /opt/business-start
 docker compose -f docker-compose.yml -f docker-compose.vps.yml down
-systemctl stop alphabank-copilot.service 2>/dev/null || true
+systemctl stop business-copilot.service 2>/dev/null || true
 
 # 2) Restore nginx from backup stamp
 STAMP=<stamp-from-phase-A>
@@ -244,9 +244,9 @@ Also see `/root/BOT_PROJECT_DEPLOY_RUNBOOK.txt`.
 
 ## 5. Safer alternative (zero BOT downtime during test)
 
-1. Deploy AlphaBank on **different** binds: `127.0.0.1:3200` (web), `127.0.0.1:8200` (api).
+1. Deploy app on **different** binds: `127.0.0.1:3200` (web), `127.0.0.1:8200` (api).
 2. Add temporary nginx server_name e.g. `copilot.bot-project.ru` or path-based test host.
-3. Only after smoke OK, stop BOT and switch `bot-project.ru` to 3200/8200 or move AlphaBank onto 3100/8100.
+3. Only after smoke OK, stop BOT and switch `bot-project.ru` to 3200/8200 or move app onto 3100/8100.
 
 More steps, but BOT stays live until the last switch.
 
@@ -259,11 +259,11 @@ More steps, but BOT stays live until the last switch.
 | 2026-07-19 | agent | SSH inventory only (read-only). **No files modified.** | n/a |
 | 2026-07-19 ~18:06 | agent | Phase A backup `STAMP=20260719-180638`: nginx configs, sites-enabled, `lobot.sql`, bot `.env`, docker ps, nginx -T; park `/opt/B.O.T.-Project-parked-20260719-180638` | `/root/swap-backup-20260719-180638/` |
 | 2026-07-19 ~18:10 | agent | `systemctl stop bot-project`; compose `down` (volumes kept: `BOT_project_pgdata`, `BOT_project_assignments_catalog`) | start `bot-project` + restore volumes |
-| 2026-07-19 ~18:10 | agent | Deploy tarball → `/opt/AlphaBank_case_champ`; `.env` (`DEMO_OFFLINE=1`, CORS, `NEXT_PUBLIC_API_URL`); `docker compose -f docker-compose.yml -f docker-compose.vps.yml up -d --build` on `127.0.0.1:3100/8100` | `compose down` in that dir |
-| 2026-07-19 ~18:12 | agent | nginx: SSE (`proxy_buffering off`, `proxy_read_timeout 3600s`), `/health`→`/api/v1/health`, CSP fonts Alfa/Google; same for `vps.bot-project.ru`; `nginx -t && reload` | restore confs from backup stamp |
-| 2026-07-19 ~18:12 | agent | systemd: add/enable `alphabank-copilot.service`; disable `bot-project.service` | `systemctl disable alphabank-copilot`; restore/enable `bot-project` |
+| 2026-07-19 ~18:10 | agent | Deploy tarball → `/opt/business-start`; `.env` (`DEMO_OFFLINE=1`, CORS, `NEXT_PUBLIC_API_URL`); `docker compose -f docker-compose.yml -f docker-compose.vps.yml up -d --build` on `127.0.0.1:3100/8100` | `compose down` in that dir |
+| 2026-07-19 ~18:12 | agent | nginx: SSE (`proxy_buffering off`, `proxy_read_timeout 3600s`), `/health`→`/api/v1/health`, CSP fonts Google; same for `vps.bot-project.ru`; `nginx -t && reload` | restore confs from backup stamp |
+| 2026-07-19 ~18:12 | agent | systemd: add/enable `business-copilot.service`; disable `bot-project.service` | `systemctl disable business-copilot`; restore/enable `bot-project` |
 | 2026-07-19 ~18:13 | agent | HTTPS smoke OK: `/api/v1/health`, UI 200, register→`empty_cabinet=true`, Маша home, SSE chat `TAX_CALC` | n/a (live) |
-| 2026-07-19 ~21:05 | agent | Redeploy: RAG 90 chunks; fix `40к` money parse; realistic unit-econ (НПД tax, 22 days, chart from −fix); smoke `UNIT_ECON` fixed=40000 be=2 | compose rebuild in `/opt/AlphaBank_case_champ` |
+| 2026-07-19 ~21:05 | agent | Redeploy: RAG 90 chunks; fix `40к` money parse; realistic unit-econ (НПД tax, 22 days, chart from −fix); smoke `UNIT_ECON` fixed=40000 be=2 | compose rebuild in `/opt/business-start` |
 | 2026-07-19 ~21:20 | agent | Softer LLM routing + enrich; PDF extract via ledongthuc + heuristic/CP1251 → markdown for LLM; smoke free-form GENERAL_QA | compose rebuild |
 | 2026-07-31 | agent | LLM: OpenCode Zen + model failover (Pollinations 402/403 from VPS) | compose rebuild api |
 | 2026-08-24 | agent | Docs committed to GitHub (`docs/PROJECT.md`). **Rollback BOT blocked from this machine:** SSH/22 and :443 to `155.212.170.159` time out; `bot-project.ru` A-record now `31.31.196.17` (REG.RU parking `server256.hosting.reg.ru`), not the FVDS VPS. `vps.bot-project.ru` still resolves to `155.212.170.159`. | Point A `@`/`www` back to `155.212.170.159`, then §4 |
@@ -284,11 +284,11 @@ Remove or ignore the REG.RU parking A `31.31.196.17`. Wait for TTL.
 Then on the VPS:
 
 ```bash
-# Stop AlphaBank (keep the tree)
-cd /opt/AlphaBank_case_champ
+# Stop app (keep the tree)
+cd /opt/business-start
 docker compose -f docker-compose.yml -f docker-compose.vps.yml down
-systemctl stop alphabank-copilot.service 2>/dev/null || true
-systemctl disable alphabank-copilot.service 2>/dev/null || true
+systemctl stop business-copilot.service 2>/dev/null || true
+systemctl disable business-copilot.service 2>/dev/null || true
 
 # Restore nginx from the cutover backup
 STAMP=20260719-180638
@@ -318,7 +318,7 @@ Archives: `/root/bot-project-*.tar.gz`. Runbook: `/root/BOT_PROJECT_DEPLOY_RUNBO
 
 - Key `~/.ssh/id_exita` was **rejected** by the server (`Permission denied (publickey)`); `id_exita.pub` on the laptop is **empty (0 bytes)** — fix by installing a valid pubkey in `/root/.ssh/authorized_keys` before relying on key-only auth.
 - Password auth currently works; after shared use of credentials, **rotate the root password** and prefer key-only login.
-- Do not commit deploy passwords or `.env` into the AlphaBank git repo.
+- Do not commit deploy passwords or `.env` into the git repo.
 
 ---
 
@@ -326,12 +326,12 @@ Archives: `/root/bot-project-*.tar.gz`. Runbook: `/root/BOT_PROJECT_DEPLOY_RUNBO
 
 - [ ] Phase A backups completed; stamp recorded in §6  
 - [ ] Confirm disk free (≥5–10G for images + backup)  
-- [ ] AlphaBank compose binds only `127.0.0.1`  
+- [ ] Compose binds only `127.0.0.1`  
 - [ ] `CORS_ORIGINS` + `NEXT_PUBLIC_API_URL` use `https://bot-project.ru`  
 - [ ] nginx SSE timeouts for `/api/`  
 - [ ] BOT volumes not removed  
 - [ ] Rollback command dry-run understood  
-- [ ] After demos: migrate AlphaBank off this host and restore BOT  
+- [ ] After demos: migrate app off this host and restore BOT  
 
 ---
 
@@ -343,6 +343,6 @@ Internet → nginx :443 (bot-project.ru)
               └─ /api/    → 127.0.0.1:8100  (api)
 
 NOW:     3100/8100 = B.O.T.-Project
-AFTER:   3100/8100 = AlphaBank (BOT stopped, volumes kept)
+AFTER:   3100/8100 = Бизнес: Старт (BOT stopped, volumes kept)
 ROLLBACK: restore nginx + systemctl start bot-project
 ```

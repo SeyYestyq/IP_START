@@ -14,7 +14,7 @@
   --pastel-rose: #fee1e1;
   --pastel-cyan: #e3f4f8;
   --radius-card: 28px;
-  --font-sans: "Alfa Interface Sans", Manrope, system-ui, sans-serif;
+  --font-sans: Manrope, system-ui, sans-serif;
 }
 
 html,
@@ -32,38 +32,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-@font-face {
-  font-family: "Alfa Interface Sans";
-  src: url("https://alfabank.servicecdn.ru/media/fonts/alfa-interface-sans_regular.woff2")
-    format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Alfa Interface Sans";
-  src: url("https://alfabank.servicecdn.ru/media/fonts/alfa-interface-sans_medium.woff2")
-    format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Alfa Interface Sans";
-  src: url("https://alfabank.servicecdn.ru/media/fonts/alfa-interface-sans_bold.woff2")
-    format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 .tabular {
   font-variant-numeric: tabular-nums;
 }
 
-/* Horizontal cashback strip (Alpha-style) */
+/* Horizontal cashback strip */
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;

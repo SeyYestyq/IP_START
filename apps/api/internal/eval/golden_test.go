@@ -3,9 +3,9 @@ package eval
 import (
 	"testing"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/adapters/memory"
-	"github.com/alphabank-case-champ/copilot-api/internal/agents"
-	"github.com/alphabank-case-champ/copilot-api/internal/sdui"
+	"github.com/SeyYestyq/copilot-api/internal/adapters/memory"
+	"github.com/SeyYestyq/copilot-api/internal/agents"
+	"github.com/SeyYestyq/copilot-api/internal/sdui"
 )
 
 type goldenCase struct {

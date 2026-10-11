@@ -3,7 +3,7 @@ package legalscan
 import (
 	"strings"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/domain"
+	"github.com/SeyYestyq/copilot-api/internal/domain"
 )
 
 // Result of heuristic document review.

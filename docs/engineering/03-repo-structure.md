@@ -3,7 +3,7 @@
 Создаётся при старте implementation plan. Сейчас в репозитории — документация.
 
 ```text
-AlphaBank_case_champ/
+business-start/
 ├── AGENTS.md
 ├── README.md
 ├── docs/

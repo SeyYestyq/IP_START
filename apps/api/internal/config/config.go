@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/llm"
+	"github.com/SeyYestyq/copilot-api/internal/llm"
 )
 
 type Config struct {

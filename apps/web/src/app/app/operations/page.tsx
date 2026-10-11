@@ -579,7 +579,7 @@ export default function OperationsPage() {
           <div className="min-w-0 flex-1">
             <p className="font-semibold">Разобрать выписку в чате</p>
             <p className="mt-0.5 text-sm text-ink/55">
-              Расходы, доходы, налог и сервисы Альфа-Банка — по вашим цифрам.
+              Расходы, доходы, налог и сервисы по вашим показателям.
             </p>
             <Link
               href={chatHref(promptStatementOverview(summary))}

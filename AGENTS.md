@@ -37,9 +37,9 @@
 
 ## Дизайн (обязательно прочитать перед UI)
 
-- `docs/design/06-alfa-visual-language.md` — как выглядит Альфа / Альфа-Бизнес  
+- `docs/design/06-visual-language.md` — визуальный язык и дизайн-система  
 - `docs/design/07-dashboard-patterns.md` — decision-first Home, не KPI soup  
-- `docs/design/08-alfa-marketing-ui-patterns.md` + `docs/design/references/alfa-web-2026/` — актуальные скрины  
+- `docs/design/08-marketing-ui-patterns.md` + `docs/design/references/web-2026/` — актуальные паттерны  
 - Landing = pastel/bento/3D; Home ≈ «Сервисы»; chat/money = спокойный trust + `#EF3124`  
 - Radius карточек 24–32px; segment active = тёмная pill
 

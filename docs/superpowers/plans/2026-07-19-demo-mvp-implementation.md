@@ -64,7 +64,7 @@
 
 ### Task 9: Landing + Home + demo script
 
-- [x] Landing Alfa bento; Home decision-first tax hero; `/demo` script buttons
+- [x] Landing bento; Home decision-first tax hero; `/demo` script buttons
 - [x] CJM `/app/journey`
 
 ### Task 10: Legal scanner (P1)

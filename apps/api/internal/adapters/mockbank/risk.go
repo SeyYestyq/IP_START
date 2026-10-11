@@ -1,6 +1,6 @@
 package mockbank
 
-import "github.com/alphabank-case-champ/copilot-api/internal/domain"
+import "github.com/SeyYestyq/copilot-api/internal/domain"
 
 func CheckCounterpartyRisk(inn string) domain.RiskResult {
 	switch inn {
@@ -17,7 +17,7 @@ func CheckCounterpartyRisk(inn string) domain.RiskResult {
 		return domain.RiskResult{
 			INN: inn, Level: "red", Title: "Высокий риск — платёж лучше отложить",
 			Reasons:        []string{"Контрагент в стоп-листе проверки"},
-			Recommendation: "Не отправляйте деньги без ручной проверки. В Альфа-Банке можно уточнить статус у менеджера или через поддержку РКО.",
+			Recommendation: "Не отправляйте деньги без ручной проверки. В банке можно уточнить статус у менеджера или через поддержку РКО.",
 		}
 	default:
 		return domain.RiskResult{

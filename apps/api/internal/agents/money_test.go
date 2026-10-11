@@ -3,8 +3,8 @@ package agents
 import (
 	"testing"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/adapters/memory"
-	"github.com/alphabank-case-champ/copilot-api/internal/sdui"
+	"github.com/SeyYestyq/copilot-api/internal/adapters/memory"
+	"github.com/SeyYestyq/copilot-api/internal/sdui"
 )
 
 func TestExtractMoneyKSuffix(t *testing.T) {

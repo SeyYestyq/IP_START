@@ -14,17 +14,17 @@ import (
 	"strings"
 	"time"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/adapters/memory"
-	"github.com/alphabank-case-champ/copilot-api/internal/adapters/mockbank"
-	"github.com/alphabank-case-champ/copilot-api/internal/agents"
-	"github.com/alphabank-case-champ/copilot-api/internal/calc"
-	"github.com/alphabank-case-champ/copilot-api/internal/config"
-	"github.com/alphabank-case-champ/copilot-api/internal/domain"
-	"github.com/alphabank-case-champ/copilot-api/internal/guard"
-	"github.com/alphabank-case-champ/copilot-api/internal/llm"
-	"github.com/alphabank-case-champ/copilot-api/internal/pdftext"
-	"github.com/alphabank-case-champ/copilot-api/internal/rag"
-	"github.com/alphabank-case-champ/copilot-api/internal/tools"
+	"github.com/SeyYestyq/copilot-api/internal/adapters/memory"
+	"github.com/SeyYestyq/copilot-api/internal/adapters/mockbank"
+	"github.com/SeyYestyq/copilot-api/internal/agents"
+	"github.com/SeyYestyq/copilot-api/internal/calc"
+	"github.com/SeyYestyq/copilot-api/internal/config"
+	"github.com/SeyYestyq/copilot-api/internal/domain"
+	"github.com/SeyYestyq/copilot-api/internal/guard"
+	"github.com/SeyYestyq/copilot-api/internal/llm"
+	"github.com/SeyYestyq/copilot-api/internal/pdftext"
+	"github.com/SeyYestyq/copilot-api/internal/rag"
+	"github.com/SeyYestyq/copilot-api/internal/tools"
 	"github.com/go-chi/chi/v5"
 	chimw "github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
@@ -628,7 +628,7 @@ func (s *Server) legalUpload(w http.ResponseWriter, r *http.Request) {
 		llmBody = string([]rune(llmBody)[:16000]) + "\n…[обрезано]"
 	}
 	if !s.cfg.DemoOffline && s.orch.LLM != nil && strings.TrimSpace(scanText) != "" {
-		system := `Ты юридический ассистент продукта «Альфа-Бизнес: Старт».
+		system := `Ты юридический ассистент продукта «Бизнес: Старт».
 Документ уже преобразован в markdown для тебя — опирайся на него как на источник истины.
 Структура ответа:
 1) Главный вывод для предпринимателя

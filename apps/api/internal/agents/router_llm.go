@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/domain"
+	"github.com/SeyYestyq/copilot-api/internal/domain"
 )
 
 var validIntents = map[string]bool{
@@ -88,7 +88,7 @@ func explicitCommand(lower string) bool {
 }
 
 func (o *Orchestrator) classifyLLM(ctx context.Context, msg string, history []string) (string, float64) {
-	system := `Ты маршрутизатор продукта «Альфа-Бизнес: Старт».
+	system := `Ты маршрутизатор продукта «Бизнес: Старт».
 Понимай смысл свободной русской речи. Верни ТОЛЬКО JSON без markdown:
 {"intent":"TAX_CALC|TRANSACTION|LEGAL_REVIEW|ONBOARDING|UNIT_ECON|PIGGY|COMPLIANCE|GENERAL_QA","confidence":0.0,"extracted_entities":{}}
 

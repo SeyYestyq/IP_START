@@ -7,7 +7,9 @@ apps/web/.env.local
 # Go / uploads
 apps/api/bin/
 apps/api/data/
-data/
+/data/
+!apps/api/internal/rag/data/
+!apps/api/internal/rag/data/*.jsonl
 
 # Dependencies / build
 node_modules/

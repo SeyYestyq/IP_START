@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/adapters/memory"
+	"github.com/SeyYestyq/copilot-api/internal/adapters/memory"
 )
 
 func main() {

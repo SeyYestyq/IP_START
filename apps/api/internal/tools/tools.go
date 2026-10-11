@@ -3,11 +3,11 @@ package tools
 import (
 	"time"
 
-	"github.com/alphabank-case-champ/copilot-api/internal/adapters/mockbank"
-	"github.com/alphabank-case-champ/copilot-api/internal/calc"
-	"github.com/alphabank-case-champ/copilot-api/internal/domain"
-	"github.com/alphabank-case-champ/copilot-api/internal/legalscan"
-	"github.com/alphabank-case-champ/copilot-api/internal/rag"
+	"github.com/SeyYestyq/copilot-api/internal/adapters/mockbank"
+	"github.com/SeyYestyq/copilot-api/internal/calc"
+	"github.com/SeyYestyq/copilot-api/internal/domain"
+	"github.com/SeyYestyq/copilot-api/internal/legalscan"
+	"github.com/SeyYestyq/copilot-api/internal/rag"
 )
 
 // Backend is the per-user data surface used by tool adapters.

@@ -4,7 +4,7 @@
 
 | Surface | Why |
 |---------|-----|
-| Bottom nav (`AppNav`) | Alfa-like app shell; Chat hides nav for composer UX |
+| Bottom nav (`AppNav`) | Мобильный app shell; Chat скрывает nav для поля ввода |
 | `/app/operations` | Real seed transactions + income/expense/net |
 | `/app/services` | Product grid → working deep-links only |
 | `/app/piggy` | PATCH piggy rate/enable; gap from home |

@@ -1,8 +1,8 @@
-# Alfa web UI references (2026)
+# Web UI references (2026)
 
-Скриншоты маркетингового и сервисного UI Альфа-Банка для визуального паритета Copilot.
+Скриншоты маркетингового и сервисного интерфейса для визуального паритета Copilot.
 
-Разбор паттернов: [../../08-alfa-marketing-ui-patterns.md](../../08-alfa-marketing-ui-patterns.md).
+Разбор паттернов: [../../08-marketing-ui-patterns.md](../../08-marketing-ui-patterns.md).
 
 | File | Subject |
 |------|---------|

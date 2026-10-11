@@ -1,9 +1,9 @@
-# Паттерны UI Альфы (референсы сайта / приложения 2026)
+# Паттерны финтех-интерфейса (референсы 2026)
 
-Источник: скриншоты актуального маркетингового и сервисного UI Альфа-Банка (июль 2026).  
-Файлы: [`references/alfa-web-2026/`](references/alfa-web-2026/).
+Источник: скриншоты актуального маркетингового и сервисного финтех-интерфейса (2026).  
+Файлы: [`references/web-2026/`](references/web-2026/).
 
-Этот документ **дополняет** [06-alfa-visual-language.md](06-alfa-visual-language.md) конкретными layout/component-паттернами, которые жюри узнает как «Альфа».
+Этот документ **дополняет** [06-visual-language.md](06-visual-language.md) конкретными layout/component-паттернами.
 
 ## Карта референсов
 
@@ -41,7 +41,7 @@
 
 | Роль | Как у Альфы |
 |------|-------------|
-| Brand / CTA | Красный `#EF3124` — кнопка «Войти», «Стать клиентом», логотип A |
+| Brand / CTA | Красный `#EF3124` — кнопка «Войти», «Стать клиентом», логотип |
 | Pastel fills | Фон промо-карточек (не весь chrome) |
 | Text | Ink/black заголовки; secondary — тёмно-серый |
 | 3D assets | Насыщенные глянцевые объекты (карты, монеты, % ) — главный «wow» |
@@ -111,7 +111,7 @@
 
 - Слева текст + красная pill CTA.  
 - Справа red panel + mock телефона с сеткой pastel tiles.  
-- Применение: hero лендинга «Банк, с которым начинается бизнес».
+- Применение: hero лендинга «Сервис, с которым начинается бизнес».
 
 ### 6. Services dashboard
 
@@ -120,7 +120,7 @@
 - Заголовок «Сервисы».  
 - Слева: data card (курсы) — таблица, флаги, disclaimer.  
 - Справа: **stacked rows** — title + subtext + 3D icon справа.  
-- Одна row **inverted black** = primary action (у Альфы «Оформить самозанятость» → у нас «Оформить НПД / открыть путь»).  
+- Одна row **inverted black** = primary action (например, «Оформить НПД / открыть путь»).  
 - Применение: **Home Copilot** и список действий.
 
 ### 7. Icon filter bar
@@ -136,7 +136,7 @@
 Реф. 07.
 
 - Black feature card + light stat cards + 3D premium objects.  
-- Применение: блок доверия на landing («почему Альфа»).
+- Применение: блок доверия на landing.
 
 ---
 
@@ -188,8 +188,8 @@ Segment active: `background: #1A1A1A; color: #FFF`.
 
 ## Чеклист для UI-агента
 
-- [ ] Landing узнаваем как Альфа (red CTA, large radius, 3D/pastel bento)  
+- [ ] Landing выглядит современно (red CTA, large radius, 3D/pastel bento)  
 - [ ] Home ближе к реф. 05 (rows + optional black CTA «легализация»)  
 - [ ] Segment/filter = dark pill active  
 - [ ] Chat/money = white cards, `#EF3124` actions, дисклеймер  
-- [ ] Референсы просмотрены из `references/alfa-web-2026/` перед вёрсткой  
+- [ ] Референсы просмотрены из `references/web-2026/` перед вёрсткой  

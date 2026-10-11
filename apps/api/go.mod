@@ -1,4 +1,4 @@
-module github.com/alphabank-case-champ/copilot-api
+module github.com/SeyYestyq/copilot-api
 
 go 1.24.1
 
